@@ -2,13 +2,15 @@
 <html>
 <head>
     <title>Blog</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%static 'blog/styles.css'%}"/>
 </head>
 <body>
-    <h1>Blog Posts</h1>
+    <h1 class="homehead">The Scribbles</h1>
     {% for post in posts %}
         <h2><a href="{%url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
         <p>{{ post.content}}</p>
     {% endfor %}
-    <a href="{%url 'post_new' %}">New Post</a>
+    <a href="{%url 'post_new' %}" class="new-post-button">New Scribble</a>
 </body>
 </html>

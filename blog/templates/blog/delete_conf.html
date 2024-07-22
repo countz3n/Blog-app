@@ -7,22 +7,31 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>new post</title>
+        <title>DELETE</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" type="text/css" href="{%static 'blog/styles.css'%}"/>
+        <link rel="stylesheet" type="text/css" href="{%static 'blog/styles.css'%}">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h2>New Post</h2>
-        <form method="POST" class="new-post-form">
-            {% csrf_token %}
-            {{form.as_p}}
-            <button type="submit"> Save</button>
-        </form>
-        <a href="{%url 'post_list' %}">Back to list</a>
+        <div>
+            <div>
+                <h1>Are you sure you want to delete this post?</h1>
+                <h2>{{post.title}}</h2>
+            </div>
+            <div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div>
+                        <button type="submit">Confirm</button>
+                        <a href="{%url 'post_list'%}">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="" async defer></script>
     </body>
 </html>

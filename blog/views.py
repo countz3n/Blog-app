@@ -34,4 +34,9 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})    
 
-# Create your views here.
+def post_delete(request,pk):
+    post=get_object_or_404(Post,pk=pk)
+    if request.method=="POST":
+        post.delete()
+        return redirect('post_list')
+    return render(request,'blog/delete_conf.html',{'post':post})
