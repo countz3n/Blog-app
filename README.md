@@ -54,39 +54,6 @@ python manage.py runserver
 
 Open your web browser and go to http://127.0.0.1:8000 to see the blog application.
 
-Project Structure:
-
-django-blog-app/
-│
-├── blog/
-│   ├── migrations/
-│   ├── static/
-│   │   ├── blog/
-│   │       ├── styles.css
-│   ├── templates/
-│   │   ├── blog/
-│   │   │   ├── delete_conf.html
-│   │   │   ├── post_detail.html
-│   │   │   ├── post_form.html
-│   │   │   ├── post_list.html
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   ├── views.py
-│
-├── blog_app/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│
-├── manage.py
-├── requirements.txt
-
 CSS Styling:
 The application uses a basic CSS stylesheet for styling, located at blog/static/blog/styles.css. You can customize this file to update the appearance of your blog application.
 
